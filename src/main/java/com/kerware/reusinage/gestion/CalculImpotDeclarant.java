@@ -8,7 +8,7 @@ public class CalculImpotDeclarant extends StategieCalcul {
     private int revenuFiscalReference;
     private double nbPartDeclarant;
 
-    public void initialiser(){
+    public void initialiser() {
         this.revenuFiscalReference = CalculateurImpot.revenuFiscalReference;
         this.nbPartDeclarant = CalculateurImpot.nbPartDeclarant;
     }
@@ -20,9 +20,10 @@ public class CalculImpotDeclarant extends StategieCalcul {
 
         double impotDeclarant = 0;
 
-        for(TranchesRevenusImposables tranche : TranchesRevenusImposables.values()){
-            if(revenuImposable >= tranche.getValeurDebutDeTranche() && revenuImposable <= tranche.getValeurFinDeTranche()){
-                impotDeclarant += ( revenuImposable - tranche.getValeurDebutDeTranche()) * tranche.getTauxImposition();
+        for (TranchesRevenusImposables tranche : TranchesRevenusImposables.values()) {
+            if (revenuImposable >= tranche.getValeurDebutDeTranche()
+                    && revenuImposable <= tranche.getValeurFinDeTranche()) {
+                impotDeclarant += (revenuImposable - tranche.getValeurDebutDeTranche()) * tranche.getTauxImposition();
             }
         }
 
@@ -30,7 +31,7 @@ public class CalculImpotDeclarant extends StategieCalcul {
         impotDeclarant = Math.round(impotDeclarant);
 
         return impotDeclarant;
-        
+
     }
 
 }

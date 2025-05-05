@@ -5,11 +5,12 @@ import com.kerware.reusinage.parametres.Abattement;
 import com.kerware.reusinage.utile.DonneeImpot;
 import com.kerware.simulateur.SituationFamiliale;
 
+// EXIGENCE : EXG_IMPOT_02
 public class CalculAbattement extends StategieCalcul {
 
     DonneeImpot donnee;
 
-    public void initialiser(){
+    public void initialiser() {
         this.donnee = CalculateurImpot.donnee;
     }
 
@@ -24,7 +25,8 @@ public class CalculAbattement extends StategieCalcul {
             abattementDeclarant1 = Abattement.LIMITE_MINIMALE;
         }
 
-        if ( donnee.getSituationFamiliale() == SituationFamiliale.MARIE || donnee.getSituationFamiliale() == SituationFamiliale.PACSE ) {
+        if (donnee.getSituationFamiliale() == SituationFamiliale.MARIE
+                || donnee.getSituationFamiliale() == SituationFamiliale.PACSE) {
             if (abattementDeclarant2 > Abattement.LIMITE_MAXIMALE) {
                 abattementDeclarant2 = Abattement.LIMITE_MAXIMALE;
             } else if (abattementDeclarant2 < Abattement.LIMITE_MINIMALE) {
@@ -32,7 +34,7 @@ public class CalculAbattement extends StategieCalcul {
             }
         }
 
-        return abattementDeclarant1 + abattementDeclarant2;    
+        return abattementDeclarant1 + abattementDeclarant2;
     }
 
 }

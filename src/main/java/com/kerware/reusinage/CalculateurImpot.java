@@ -29,7 +29,6 @@ public class CalculateurImpot {
     public static double nbPart;
     public static double nbPartDeclarant;
 
-
     public void setCalculAbattement(StategieCalcul calculAbattement) {
         this.calculAbattement = calculAbattement;
     }
@@ -61,6 +60,7 @@ public class CalculateurImpot {
     public void setCalculPart(StategieCalcul calculPart) {
         this.calculPart = calculPart;
     }
+
     public void setCalculPartDclarant(StategieCalcul calculPartDeclarant) {
         this.calculPartDeclarant = calculPartDeclarant;
     }
@@ -101,7 +101,6 @@ public class CalculateurImpot {
 
         calculImpotFinal.initialiser();
         impotSurRevenuNet = (int) calculImpotFinal.calcul();
-
 
     }
 

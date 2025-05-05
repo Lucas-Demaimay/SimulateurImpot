@@ -8,12 +8,11 @@ public class CalculImpotFinal extends StategieCalcul {
     private double decote;
     private double contributionExceptionelle;
 
-    public void initialiser(){
+    public void initialiser() {
         this.impot = CalculateurImpot.impotAvantDecote;
         this.decote = CalculateurImpot.decote;
         this.contributionExceptionelle = CalculateurImpot.CEHR;
     }
-    
 
     @Override
     public double calcul() {

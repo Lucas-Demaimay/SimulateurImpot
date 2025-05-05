@@ -6,7 +6,7 @@ import com.kerware.simulateur.SituationFamiliale;
 
 public class SimulateurReusine implements ICalculateurImpot {
 
-    private DonneeImpot donnee;
+    private DonneeImpot donnee = new DonneeImpot();
     private CalculateurImpot calculateur;
 
     public void setCalculateur(CalculateurImpot calculateur) {
@@ -45,7 +45,7 @@ public class SimulateurReusine implements ICalculateurImpot {
 
     @Override
     public void calculImpotSurRevenuNet() {
-        calculateur.lancer(this.donnee);    
+        calculateur.lancer(this.donnee);
     }
 
     @Override
@@ -65,7 +65,7 @@ public class SimulateurReusine implements ICalculateurImpot {
 
     @Override
     public int getRevenuFiscalReference() {
-        return calculateur.getRevenuFiscalReference();    
+        return calculateur.getRevenuFiscalReference();
     }
 
     @Override
@@ -85,7 +85,7 @@ public class SimulateurReusine implements ICalculateurImpot {
 
     @Override
     public int getDecote() {
-        return calculateur.getDecote();    
+        return calculateur.getDecote();
     }
 
     @Override

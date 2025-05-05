@@ -3,8 +3,10 @@ package com.kerware.reusinage.parametres;
 import com.kerware.reusinage.utile.Tranche;
 
 /**
- * Enumérations des différentes tranches de la contribution exceptionelle sur les hauts revenus.
- * Le taux pour un célibataire et celui pour un couple sont associés à la tranche.
+ * Enumérations des différentes tranches de la contribution exceptionelle sur
+ * les hauts revenus.
+ * Le taux pour un célibataire et celui pour un couple sont associés à la
+ * tranche.
  */
 public enum TranchesCEHR {
     TRANCHE_00(0, 24999, 0.0, 0.0),
@@ -16,8 +18,8 @@ public enum TranchesCEHR {
     private double tauxCEHRCelibataire;
     private double tauxCEHRCouple;
 
-    TranchesCEHR(int valeurDebutDeTranche, int valeurFinDeTranche, double tauxCEHRCelibataire, double tauxCEHRCouple){
-        this.tranche =  new Tranche(valeurDebutDeTranche, valeurFinDeTranche);
+    TranchesCEHR(int valeurDebutDeTranche, int valeurFinDeTranche, double tauxCEHRCelibataire, double tauxCEHRCouple) {
+        this.tranche = new Tranche(valeurDebutDeTranche, valeurFinDeTranche);
         this.tauxCEHRCelibataire = tauxCEHRCelibataire;
         this.tauxCEHRCouple = tauxCEHRCouple;
     }
@@ -37,6 +39,5 @@ public enum TranchesCEHR {
     public double getTauxCEHRCouple() {
         return tauxCEHRCouple;
     }
-
 
 }

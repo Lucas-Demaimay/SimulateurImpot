@@ -10,10 +10,11 @@ import com.kerware.reusinage.gestion.CalculImpotFoyerFiscal;
 import com.kerware.reusinage.gestion.CalculPart;
 import com.kerware.reusinage.gestion.CalculRevenuFiscalReference;
 import com.kerware.reusinage.utile.DonneeImpot;
+import com.kerware.simulateur.ICalculateurImpot;
 
 public class CreateurSimulateur {
 
-    public static SimulateurReusine creerSimulateurImpot2024(DonneeImpot donnee) {
+    public static ICalculateurImpot creerSimulateurImpot2024() {
         CalculateurImpot calculateur = new CalculateurImpot();
 
         calculateur.setCalculAbattement(new CalculAbattement());
@@ -28,12 +29,7 @@ public class CreateurSimulateur {
 
         SimulateurReusine simulateur = new SimulateurReusine();
         simulateur.setCalculateur(calculateur);
-        simulateur.setRevenusNetDeclarant1(donnee.getRevenuNetDeclarant1());
-        simulateur.setRevenusNetDeclarant2(donnee.getRevenuNetDeclarant2());
-        simulateur.setNbEnfantsSituationHandicap(donnee.getNbEnfantsHandicapes());
-        simulateur.setParentIsole(donnee.isParentIsole());
-        simulateur.setNbEnfantsACharge(donnee.getNbEnfants());
-        simulateur.setSituationFamiliale(donnee.getSituationFamiliale());
+    
         return simulateur;
     }
 

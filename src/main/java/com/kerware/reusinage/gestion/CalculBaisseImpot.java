@@ -3,6 +3,7 @@ package com.kerware.reusinage.gestion;
 import com.kerware.reusinage.CalculateurImpot;
 import com.kerware.reusinage.parametres.Plafond;
 
+// EXIGENCE : EXG_IMPOT_05
 public class CalculBaisseImpot extends StategieCalcul {
 
     private double impotDeclarant;
@@ -10,7 +11,7 @@ public class CalculBaisseImpot extends StategieCalcul {
     private double nbPart;
     private double nbPartDeclarant;
 
-    public void initialiser(){
+    public void initialiser() {
         this.impotDeclarant = CalculateurImpot.impotDeclarant;
         this.impot = CalculateurImpot.impotFoyerFiscal;
         this.nbPart = CalculateurImpot.nbPart;
@@ -24,7 +25,7 @@ public class CalculBaisseImpot extends StategieCalcul {
 
         double plafond = (ecartParts / 0.5) * Plafond.PLAFOND_DEMIPART.getPlafond();
 
-        if(baisseImpot >= plafond){
+        if (baisseImpot >= plafond) {
             impot = impotDeclarant - plafond;
         }
 

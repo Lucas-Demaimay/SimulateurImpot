@@ -8,7 +8,7 @@ public class CalculRevenuFiscalReference extends StategieCalcul {
     private DonneeImpot donnee;
     private int abattement;
 
-    public void initialiser(){
+    public void initialiser() {
         this.donnee = CalculateurImpot.donnee;
         this.abattement = CalculateurImpot.abattement;
     }
@@ -17,7 +17,7 @@ public class CalculRevenuFiscalReference extends StategieCalcul {
     public double calcul() {
         double revenuFiscalReference = donnee.getRevenuNetDeclarant1() + donnee.getRevenuNetDeclarant2() - abattement;
 
-        if(revenuFiscalReference < 0){
+        if (revenuFiscalReference < 0) {
             return 0;
         }
         return revenuFiscalReference;
