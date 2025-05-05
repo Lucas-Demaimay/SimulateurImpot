@@ -106,31 +106,31 @@ public class CalculateurImpot {
     }
 
     public double getCEHR() {
-        return this.CEHR;
+        return CEHR;
     }
 
     public int getRevenuFiscalReference() {
-        return this.revenuFiscalReference;
+        return revenuFiscalReference;
     }
 
     public int getAbattement() {
-        return this.abattement;
+        return abattement;
     }
 
     public double getNbPartsFoyerFiscal() {
-        return this.nbPartsFoyerFiscal;
+        return nbPartsFoyerFiscal;
     }
 
     public int getImpotAvantDecote() {
-        return this.impotAvantDecote;
+        return impotAvantDecote;
     }
 
     public int getDecote() {
-        return this.decote;
+        return decote;
     }
 
     public int getImpotSurRevenuNet() {
-        return this.impotSurRevenuNet;
+        return impotSurRevenuNet;
     }
 
 }
