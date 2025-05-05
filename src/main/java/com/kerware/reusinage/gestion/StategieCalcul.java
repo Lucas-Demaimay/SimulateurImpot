@@ -1,7 +1,9 @@
 package com.kerware.reusinage.gestion;
 
-public interface StategieCalcul {
+public abstract class StategieCalcul {
 
-    public int calcul();
+    public abstract void initialiser();
+
+    public abstract double calcul();
 
 }

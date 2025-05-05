@@ -1,6 +1,6 @@
 package com.kerware.reusinage.utile;
 
-import com.kerware.reusinage.parametres.SituationFamiliale;
+import com.kerware.simulateur.SituationFamiliale;
 
 public class DonneeImpot {
 
@@ -73,6 +73,30 @@ public class DonneeImpot {
 
     public boolean isParentIsole() {
         return parentIsole;
+    }
+
+    public void setRevenuNetDeclarant1(int revenuNetDeclarant1) {
+        this.revenuNetDeclarant1 = revenuNetDeclarant1;
+    }
+
+    public void setRevenuNetDeclarant2(int revenuNetDeclarant2) {
+        this.revenuNetDeclarant2 = revenuNetDeclarant2;
+    }
+
+    public void setNbEnfants(int nbEnfants) {
+        this.nbEnfants = nbEnfants;
+    }
+
+    public void setNbEnfantsHandicapes(int nbEnfantsHandicapes) {
+        this.nbEnfantsHandicapes = nbEnfantsHandicapes;
+    }
+
+    public void setSituationFamiliale(SituationFamiliale situationFamiliale) {
+        this.situationFamiliale = situationFamiliale;
+    }
+
+    public void setParentIsole(boolean parentIsole) {
+        this.parentIsole = parentIsole;
     }
 
     

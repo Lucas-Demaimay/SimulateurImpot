@@ -1,104 +1,96 @@
 package com.kerware.reusinage;
 
+import com.kerware.reusinage.utile.DonneeImpot;
 import com.kerware.simulateur.ICalculateurImpot;
 import com.kerware.simulateur.SituationFamiliale;
 
 public class SimulateurReusine implements ICalculateurImpot {
 
+    private DonneeImpot donnee;
+    private CalculateurImpot calculateur;
+
+    public void setCalculateur(CalculateurImpot calculateur) {
+        this.calculateur = calculateur;
+    }
+
     @Override
     public void setRevenusNetDeclarant1(int rn) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'setRevenusNetDeclarant1'");
+        this.donnee.setRevenuNetDeclarant1(rn);
     }
 
     @Override
     public void setRevenusNetDeclarant2(int rn) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'setRevenusNetDeclarant2'");
+        this.donnee.setRevenuNetDeclarant2(rn);
     }
 
     @Override
     public void setSituationFamiliale(SituationFamiliale sf) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'setSituationFamiliale'");
+        this.donnee.setSituationFamiliale(sf);
     }
 
     @Override
     public void setNbEnfantsACharge(int nbe) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'setNbEnfantsACharge'");
+        this.donnee.setNbEnfants(nbe);
     }
 
     @Override
     public void setNbEnfantsSituationHandicap(int nbesh) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'setNbEnfantsSituationHandicap'");
+        this.setNbEnfantsSituationHandicap(nbesh);
     }
 
     @Override
     public void setParentIsole(boolean pi) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'setParentIsole'");
+        this.donnee.setParentIsole(pi);
     }
 
     @Override
     public void calculImpotSurRevenuNet() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'calculImpotSurRevenuNet'");
+        calculateur.lancer(this.donnee);    
     }
 
     @Override
     public int getRevenuNetDeclatant1() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getRevenuNetDeclatant1'");
+        return this.donnee.getRevenuNetDeclarant1();
     }
 
     @Override
     public int getRevenuNetDeclatant2() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getRevenuNetDeclatant2'");
+        return this.donnee.getRevenuNetDeclarant2();
     }
 
     @Override
     public double getContribExceptionnelle() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getContribExceptionnelle'");
+        return calculateur.getCEHR();
     }
 
     @Override
     public int getRevenuFiscalReference() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getRevenuFiscalReference'");
+        return calculateur.getRevenuFiscalReference();    
     }
 
     @Override
     public int getAbattement() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getAbattement'");
+        return calculateur.getAbattement();
     }
 
     @Override
     public double getNbPartsFoyerFiscal() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getNbPartsFoyerFiscal'");
+        return calculateur.getNbPartsFoyerFiscal();
     }
 
     @Override
     public int getImpotAvantDecote() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getImpotAvantDecote'");
+        return calculateur.getImpotAvantDecote();
     }
 
     @Override
     public int getDecote() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getDecote'");
+        return calculateur.getDecote();    
     }
 
     @Override
     public int getImpotSurRevenuNet() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getImpotSurRevenuNet'");
+        return calculateur.getImpotSurRevenuNet();
     }
 
 }
